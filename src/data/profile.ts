@@ -110,6 +110,7 @@ export const profile: ProfileData = {
   location: "Serang, Banten",
   email: "jawira252@gmail.com",
   availability: "Open to freelance",
+  avatarUrl: "/avatar.png",
   githubUsername: "xjawwv",
 
   // ============================================================================
