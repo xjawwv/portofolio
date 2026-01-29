@@ -24,11 +24,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <span>{project.year}</span>
           </div>
         </div>
-        {project.featured && (
-          <span className="px-2 py-0.5 text-xs font-medium bg-amber-900/30 text-amber-400 rounded">
-            Featured
-          </span>
-        )}
       </div>
 
       {/* Description */}

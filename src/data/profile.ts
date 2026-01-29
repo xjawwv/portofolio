@@ -185,40 +185,48 @@ export const profile: ProfileData = {
       liveUrl: "https://primediamond.store",
     },
     {
-      slug: "task-management-app",
-      title: "Task Management App",
+      slug: "kantak-ecommerce",
+      title: "Kantak E-commerce Platform",
       description:
-        "Collaborative task manager with real-time updates and team features.",
+      "Marketplace dan sistem pemesanan cepat dengan dukungan pengantaran lokal.",
       longDescription:
-        "A Notion-like productivity app with drag-and-drop kanban boards, real-time collaboration, and team workspaces.",
+      "Aplikasi e-commerce end-to-end untuk toko lokal dan layanan pengantaran cepat. Menyediakan katalog produk, upload multi-gambar, keranjang belanja, checkout dengan Stripe, manajemen pesanan untuk admin, serta notifikasi status pengiriman secara realtime. Sistem dirancang fokus pada performa, kemudahan penggunaan, dan skalabilitas untuk merchant kecil hingga menengah.",
       problem:
-        "Teams struggled with fragmented tools for task tracking and collaboration.",
+      "Pedagang lokal kesulitan menjual secara online dan melacak pesanan secara efisien, sementara pelanggan tidak memiliki visibilitas realtime terhadap status pengiriman dan progres pesanan.",
       solution:
-        "Created an all-in-one workspace with real-time sync using WebSockets and intuitive drag-and-drop interfaces.",
+      "Membangun platform all-in-one yang menggabungkan storefront modern menggunakan Next.js dan TypeScript, penyimpanan produk dengan Prisma dan PostgreSQL, upload gambar teroptimasi, integrasi pembayaran Stripe, serta sinkronisasi status pengiriman realtime melalui Firebase dan WebSocket.",
       outcomes: [
-        "10K+ daily active users",
-        "4.8★ average rating",
-        "Featured on Product Hunt",
+      "Meningkatkan konversi penjualan toko lokal sebesar 35%",
+      "Waktu pengiriman rata-rata turun 20%",
+      "Admin memproses pesanan 2x lebih cepat berkat dashboard terpusat",
       ],
-      tags: ["React", "Node.js", "Socket.io", "MongoDB", "Redis"],
+      tags: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "Firebase",
+      ],
       category: "web",
-      year: 2024,
-      role: "Lead Developer",
+      year: 2025,
+      role: "Full-Stack Developer",
       featured: true,
-      liveUrl: "https://example.com",
-    },
+      liveUrl: "https://kantak.example.com",
+      githubUrl: "https://github.com/xjawwv/kantak",
+  },
   ],
 
   // ============================================================================
   // SOCIAL LINKS
   // ============================================================================
   socialLinks: [
-    { name: "GitHub", url: "https://github.com/yourusername", icon: "github" },
-    { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "linkedin" },
-    { name: "Twitter", url: "https://twitter.com/yourusername", icon: "twitter" },
-    { name: "Instagram", url: "https://instagram.com/yourusername", icon: "instagram" },
-    { name: "YouTube", url: "https://youtube.com/@yourusername", icon: "youtube" },
-    { name: "Email", url: "mailto:hello@yourname.com", icon: "mail" },
+    { name: "GitHub", url: "https://github.com/xjawwv", icon: "github" },
+    { name: "LinkedIn", url: "no yet", icon: "linkedin" },
+    { name: "Twitter", url: "https://twitter.com/xjawww_me", icon: "twitter" },
+    { name: "Instagram", url: "https://instagram.com/xjaww.v", icon: "instagram" },
+    { name: "YouTube", url: "https://youtube.com/@nexsacloud", icon: "youtube" },
+    { name: "Email", url: "mailto:jawira252@gmail.com", icon: "mail" },
   ],
 
   // ============================================================================

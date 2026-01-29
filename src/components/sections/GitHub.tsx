@@ -47,8 +47,8 @@ export function GitHub({ repos }: GitHubSectionProps) {
         </a>
       </div>
 
-      {/* Pinned Repos */}
-      <h3 className="text-lg font-medium mb-4">Pinned Repositories</h3>
+      {/* Repos Grid */}
+      <h3 className="text-lg font-medium mb-4">Repositories</h3>
       <div className="grid gap-4 sm:grid-cols-2">
         {displayRepos.map((repo, index) => (
           <motion.a
@@ -66,7 +66,7 @@ export function GitHub({ repos }: GitHubSectionProps) {
               <h4 className="font-medium group-hover:underline underline-offset-2">
                 {repo.name}
               </h4>
-              {repo.stars !== undefined && (
+              {repo.stars !== undefined && repo.stars > 0 && (
                 <span className="inline-flex items-center gap-1 text-sm text-neutral-400">
                   <Star className="h-3.5 w-3.5" />
                   {repo.stars}
