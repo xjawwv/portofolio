@@ -38,12 +38,12 @@ export function Section({
               <h2 className="text-2xl sm:text-3xl font-bold mb-2">{title}</h2>
             )}
             {subtitle && (
-              <p className="text-neutral-600 dark:text-neutral-400">
+              <p className="text-neutral-400">
                 {subtitle}
               </p>
             )}
             {showDivider && (
-              <div className="mt-4 w-12 h-1 bg-neutral-900 dark:bg-white rounded-full" />
+              <div className="mt-4 w-12 h-1 bg-white rounded-full" />
             )}
           </div>
         )}

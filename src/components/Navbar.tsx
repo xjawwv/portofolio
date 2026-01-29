@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 import { profile } from "@/data/profile";
 
 const navItems = [
@@ -13,6 +11,29 @@ const navItems = [
   { label: "GitHub", href: "#github" },
   { label: "Contact", href: "#contact" },
 ];
+
+// Animated Hamburger Icon Component
+function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
+  return (
+    <div className="w-5 h-5 relative flex flex-col justify-center items-center">
+      <span
+        className={`block absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+          isOpen ? "rotate-45" : "-translate-y-1.5"
+        }`}
+      />
+      <span
+        className={`block absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+          isOpen ? "opacity-0 scale-x-0" : "opacity-100"
+        }`}
+      />
+      <span
+        className={`block absolute h-0.5 w-5 bg-current transform transition-all duration-300 ease-in-out ${
+          isOpen ? "-rotate-45" : "translate-y-1.5"
+        }`}
+      />
+    </div>
+  );
+}
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -65,7 +86,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md shadow-sm"
+          ? "bg-neutral-900/80 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -74,7 +95,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-bold text-lg hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+            className="font-bold text-lg hover:text-neutral-300 transition-colors"
           >
             {profile.name.split(" ")[0]}
           </Link>
@@ -88,57 +109,52 @@ export function Navbar() {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`px-3 py-2 text-sm rounded-lg transition-colors ${
                   activeSection === item.href.slice(1)
-                    ? "text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    ? "text-white bg-neutral-800"
+                    : "text-neutral-400 hover:text-white hover:bg-neutral-800"
                 }`}
               >
                 {item.label}
               </a>
             ))}
-            <div className="ml-2 pl-2 border-l border-neutral-200 dark:border-neutral-700">
-              <ThemeToggle />
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="p-2 rounded-lg hover:bg-neutral-800 transition-colors text-white"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              <HamburgerIcon isOpen={isMobileMenuOpen} />
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
-          <div className="px-4 py-2 space-y-1">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className={`block px-3 py-2 rounded-lg transition-colors ${
-                  activeSection === item.href.slice(1)
-                    ? "text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+      <div
+        className={`md:hidden bg-neutral-900 border-t border-neutral-800 overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-2 space-y-1">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className={`block px-3 py-2 rounded-lg transition-colors ${
+                activeSection === item.href.slice(1)
+                  ? "text-white bg-neutral-800"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

@@ -12,7 +12,6 @@ import {
 
 export interface TechItem {
   name: string;
-  icon?: string;
 }
 
 export interface TechCategory {
@@ -70,17 +69,48 @@ export interface ProfileData {
 }
 
 // ============================================================================
+// TECH STACK ICON MAPPING - Maps tech name to PNG path in public/icon/
+// ============================================================================
+
+export const techIcons: Record<string, string> = {
+  // Frontend
+  "React": "/icon/React.png",
+  "Next.js": "/icon/Next-js.png",
+  "JavaScript": "/icon/Javascript.png",
+  "Tailwind CSS": "/icon/Tailwind CSS.png",
+  
+  // Backend
+  "Node.js": "/icon/Node.js.png",
+  "Express": "/icon/Express.png",
+  "MongoDB": "/icon/MongoDB.png",
+  "MySQL": "/icon/MySQL.png",
+  "Golang": "/icon/GoLang.png",
+  
+  // DevOps
+  "Docker": "/icon/Docker.png",
+  "AWS": "/icon/AWS.png",
+  "Vercel": "/icon/Vercel.png",
+  "GitHub Actions": "/icon/GitHub.png",
+  
+  // Tools
+  "Git": "/icon/Git.png",
+  "VS Code": "/icon/VsCode.png",
+  "Figma": "/icon/Figma.png",
+  "Postman": "/icon/Postman.png",
+};
+
+// ============================================================================
 // PROFILE DATA - Edit this to customize your portfolio
 // ============================================================================
 
 export const profile: ProfileData = {
-  name: "Your Name",
-  tagline: "Full-Stack Developer & UI/UX Enthusiast",
-  bio: "I craft clean, performant web experiences with modern technologies. Passionate about building products that solve real problems and delight users.",
-  location: "San Francisco, CA",
-  email: "hello@yourname.com",
+  name: "JAWIRA",
+  tagline: "Full-Stack Developer",
+  bio: "Saya membuat sebuah website clean, performa, dan responsive dengan menggunakan Next.js dan Tailwind CSS.",
+  location: "Serang, Banten",
+  email: "jawira252@gmail.com",
   availability: "Open to freelance",
-  githubUsername: "yourusername",
+  githubUsername: "xjawwv",
 
   // ============================================================================
   // TECH STACK
@@ -92,9 +122,7 @@ export const profile: ProfileData = {
       items: [
         { name: "React" },
         { name: "Next.js" },
-        { name: "TypeScript" },
         { name: "Tailwind CSS" },
-        { name: "Framer Motion" },
       ],
     },
     {
@@ -103,8 +131,8 @@ export const profile: ProfileData = {
       items: [
         { name: "Node.js" },
         { name: "Express" },
-        { name: "PostgreSQL" },
-        { name: "Prisma" },
+        { name: "MongoDB" },
+        { name: "Golang" },
       ],
     },
     {

@@ -20,11 +20,11 @@ export function TechStack() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: categoryIndex * 0.1 }}
-            className="p-6 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl"
+            className="p-6 bg-neutral-800/50 rounded-xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-white dark:bg-neutral-700 rounded-lg shadow-sm">
-                <category.icon className="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
+              <div className="p-2 bg-neutral-700 rounded-lg shadow-sm">
+                <category.icon className="h-5 w-5 text-neutral-300" />
               </div>
               <h3 className="font-semibold">{category.name}</h3>
             </div>

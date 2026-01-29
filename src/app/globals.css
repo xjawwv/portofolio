@@ -1,15 +1,10 @@
 @import "tailwindcss";
 
 /* ============================================================================
-   THEME VARIABLES
+   THEME VARIABLES - Dark Mode Only
    ============================================================================ */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
 }
@@ -27,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -51,19 +47,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #404040;
   border-radius: 4px;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #404040;
-}
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
   background: #525252;
 }
 
@@ -72,11 +60,6 @@ body {
    ============================================================================ */
 
 ::selection {
-  background: #171717;
-  color: #ffffff;
-}
-
-.dark ::selection {
   background: #ededed;
   color: #0a0a0a;
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/ProjectCard";
-import { profile, getProjectsByCategory, getFeaturedProjects } from "@/data/profile";
+import { getProjectsByCategory, getFeaturedProjects } from "@/data/profile";
 
 const categories = [
   { id: "all", label: "All" },
@@ -58,8 +58,8 @@ export function Projects() {
             }}
             className={`px-4 py-2 text-sm rounded-lg transition-colors ${
               activeCategory === category.id
-                ? "bg-neutral-900 dark:bg-white text-white dark:text-neutral-900"
-                : "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+                ? "bg-white text-neutral-900"
+                : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
             }`}
           >
             {category.label}
@@ -87,7 +87,7 @@ export function Projects() {
         <div className="mt-8 text-center">
           <button
             onClick={() => setShowAll(true)}
-            className="px-6 py-2.5 text-sm font-medium border border-neutral-300 dark:border-neutral-700 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className="px-6 py-2.5 text-sm font-medium border border-neutral-700 rounded-lg hover:bg-neutral-800 transition-colors"
           >
             Show All Projects ({filteredProjects.length})
           </button>
@@ -96,7 +96,7 @@ export function Projects() {
 
       {/* Empty State */}
       {displayedProjects.length === 0 && (
-        <p className="text-center text-neutral-500 dark:text-neutral-400 py-8">
+        <p className="text-center text-neutral-400 py-8">
           No projects found in this category.
         </p>
       )}

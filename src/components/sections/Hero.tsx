@@ -23,7 +23,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 text-sm bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-full border border-green-200 dark:border-green-800"
+              className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 text-sm bg-green-900/20 text-green-400 rounded-full border border-green-800"
             >
               <Sparkles className="h-3.5 w-3.5" />
               {profile.availability}
@@ -36,12 +36,12 @@ export function Hero() {
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 mb-6">
+          <p className="text-xl sm:text-2xl text-neutral-400 mb-6">
             {profile.tagline}
           </p>
 
           {/* Bio */}
-          <p className="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-neutral-400 mb-8 leading-relaxed">
             {profile.bio}
           </p>
 
@@ -54,7 +54,7 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-neutral-900 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               View Projects
               <ArrowRight className="h-4 w-4" />
@@ -63,14 +63,14 @@ export function Hero() {
               href={`https://github.com/${profile.githubUsername}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-300 dark:border-neutral-700 rounded-lg font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 rounded-lg font-medium hover:bg-neutral-800 transition-colors"
             >
               <Github className="h-4 w-4" />
               GitHub
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-300 dark:border-neutral-700 rounded-lg font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 rounded-lg font-medium hover:bg-neutral-800 transition-colors"
             >
               <Mail className="h-4 w-4" />
               Contact
@@ -79,7 +79,7 @@ export function Hero() {
 
           {/* Location */}
           {profile.location && (
-            <p className="mt-8 text-sm text-neutral-500 dark:text-neutral-500">
+            <p className="mt-8 text-sm text-neutral-500">
               📍 {profile.location}
             </p>
           )}
