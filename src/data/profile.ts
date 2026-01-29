@@ -212,7 +212,7 @@ export const profile: ProfileData = {
       year: 2025,
       role: "Full-Stack Developer",
       featured: true,
-      liveUrl: "https://kantak.example.com",
+      liveUrl: "https://food.pplgtwo.my.id",
       githubUrl: "https://github.com/xjawwv/kantak",
   },
   ],

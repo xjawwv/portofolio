@@ -83,7 +83,7 @@ export function Hero() {
             {/* Location */}
             {profile.location && (
               <p className="mt-8 text-sm text-neutral-500">
-                📍 {profile.location}
+                 {profile.location}
               </p>
             )}
           </motion.div>
