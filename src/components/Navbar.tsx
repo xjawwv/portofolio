@@ -7,6 +7,7 @@ import { profile } from "@/data/profile";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Tech Stack", href: "#tech-stack" },
+  { label: "Journey", href: "#timeline" },
   { label: "Projects", href: "#projects" },
   { label: "GitHub", href: "#github" },
   { label: "Contact", href: "#contact" },

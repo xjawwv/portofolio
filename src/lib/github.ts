@@ -15,7 +15,7 @@ export async function getGitHubRepos(): Promise<GitHubRepo[]> {
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
           }),
         },
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 60 }, // Cache for 1 minute (was 1 hour)
       }
     );
 

@@ -52,6 +52,16 @@ export interface GitHubRepo {
   stars?: number;
 }
 
+export interface TimelineItem {
+  id: string;
+  title: string;
+  organization: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  icon?: "work" | "education" | "award"; // Optional icon type
+}
+
 export interface ProfileData {
   name: string;
   tagline: string;
@@ -66,6 +76,8 @@ export interface ProfileData {
   projects: Project[];
   socialLinks: SocialLink[];
   pinnedRepos: GitHubRepo[];
+  experiences: TimelineItem[]; // New field
+  education: TimelineItem[];   // New field
 }
 
 // ============================================================================
@@ -106,7 +118,7 @@ export const techIcons: Record<string, string> = {
 export const profile: ProfileData = {
   name: "JAWIRA",
   tagline: "Full-Stack Developer",
-  bio: "Saya membuat sebuah website clean, performa, dan responsive dengan menggunakan Next.js dan Tailwind CSS.",
+  bio: "Saya membantu bisnis dan individu mengubah ide menjadi sebuah website digital yang indah dan berfungsi.",
   location: "Serang, Banten",
   email: "jawira252@gmail.com",
   availability: "Open to freelance",
@@ -227,6 +239,50 @@ export const profile: ProfileData = {
     { name: "Instagram", url: "https://instagram.com/xjaww.v", icon: "instagram" },
     { name: "YouTube", url: "https://youtube.com/@nexsacloud", icon: "youtube" },
     { name: "Email", url: "mailto:jawira252@gmail.com", icon: "mail" },
+  ],
+
+  // ============================================================================
+  // EXPERIENCES & EDUCATION
+  // ============================================================================
+  experiences: [
+    {
+      id: "exp-1",
+      title: "Production Staff (PKL)",
+      organization: "OXZAMEDIA",
+      startDate: "2025 22 Oktober",
+      endDate: "2026 22 Januari",
+      description: "Membantu proses produksi neonbox dan neonflex mulai dari tahap persiapan hingga finishing. perakitan rangka, pemasangan LED/wiring, dan instalasi modul pencahayaan.",
+      icon: "work",
+    },
+  ],
+  education: [
+    {
+      id: "edu-1",
+      title: "SD NEGERI 1 SILEBU",
+      organization: "Sekolah dasar",
+      startDate: "2015",
+      endDate: "2021",
+      description: "Fokus pada pembelajaran dasar dan pengembangan karakter.",
+      icon: "education",
+    },
+    {
+      id: "edu-2",
+      title: "SMP NEGERI 19 KOTA SERANG",
+      organization: "Sekolah Menengah Pertama",
+      startDate: "2021",
+      endDate: "2024",
+      description: "Fokus pada pembelajaran dasar dan memperlajari dasar-dasar pemrograman.",
+      icon: "education",
+    },
+    {
+      id: "edu-3",
+      title: "SMK NEGERI 1 KRAGILAN",
+      organization: "PPLG (Pengembangan Perangkat Lunak dan Gim)",
+      startDate: "2024",
+      endDate: "2027",
+      description: "Fokus pada pengembangan perangkat lunak dan gim.",
+      icon: "education",
+    },
   ],
 
   // ============================================================================

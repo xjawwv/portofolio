@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { TechStack } from "@/components/sections/TechStack";
+import { Timeline } from "@/components/sections/Timeline";
 import { Projects } from "@/components/sections/Projects";
 import { GitHub } from "@/components/sections/GitHub";
 import { Contact } from "@/components/sections/Contact";
@@ -18,6 +19,7 @@ export default async function Home() {
       <main>
         <Hero />
         <TechStack />
+        <Timeline />
         <Projects />
         <GitHub repos={repos} />
         <Contact />
